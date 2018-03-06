@@ -20,13 +20,14 @@ steem.api.getDiscussionsByCreated(query, function(err, res) {
     console.log(err);
   } else {
     res.forEach(post => {
-      const voters = post.active_votes
-        .filter(vote => vote.percent > 0 && vote.weight > 0 && vote.rshares > 0)
-        .map(vote => vote.voter);
+      const voters = post.active_votes.map(vote => vote.voter);
       const isVoted = voters.includes(creator);
       if (!isVoted) {
-        voting(post);
+        // 댓글 달기
         comment(post);
+        // 보팅 하기
+        voting(post);
+        // 슬랙에 메시지 보내기
         sendMessage(post);
       }
     });
@@ -35,7 +36,7 @@ steem.api.getDiscussionsByCreated(query, function(err, res) {
 
 function comment(post) {
   const title = "";
-  const body = `안녕하세요. \`${monitoringTag}\`태그를 사용하셨군요.\n업보팅하고 갑니다.👋`;
+  const body = `안녕하세요. \`${monitoringTag}\`태그를 사용해주셔서 감사합니다.\n업보팅하고 갑니다.👋`;
   const jsonMetadata = { tags: [monitoringTag] };
   steem.broadcast.comment(
     postKey,
