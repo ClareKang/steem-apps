@@ -21,10 +21,9 @@ steem.api.getDiscussionsByCreated(query, function(err, res) {
   } else {
     res.forEach(post => {
       const voters = post.active_votes
-        .filter(vote => vote.weight > 0)
+        .filter(vote => vote.percent > 0)
         .map(vote => vote.voter);
       const isVoted = voters.includes(creator);
-      console.log(post, isVoted);
       if (!isVoted) {
         voting(post);
         comment(post);
