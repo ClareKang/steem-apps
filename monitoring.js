@@ -73,7 +73,6 @@ function sendMessage(post) {
     {
       channel: "#steemit",
       username: "Steemit Bot",
-      icon_emoji: "https://cdn.worldvectorlogo.com/logos/steemit-1.svg",
       text: `meshkorea tagged post is submitted.\n*${post.title}* - by ${
         post.author
       }\nhttps://steemit.com${post.url}`
