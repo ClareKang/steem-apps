@@ -21,7 +21,7 @@ steem.api.getDiscussionsByCreated(query, function(err, res) {
   } else {
     res.forEach(post => {
       const voters = post.active_votes
-        .filter(vote => vote.percent > 0)
+        .filter(vote => vote.percent > 0 && vote.weight > 0 && vote.rshares > 0)
         .map(vote => vote.voter);
       const isVoted = voters.includes(creator);
       if (!isVoted) {
@@ -35,7 +35,7 @@ steem.api.getDiscussionsByCreated(query, function(err, res) {
 
 function comment(post) {
   const title = "";
-  const body = `안녕하세요. \`${monitoringTag}\`태그를 사용하셨군요.`;
+  const body = `안녕하세요. \`${monitoringTag}\`태그를 사용하셨군요.\n업보팅하고 갑니다.👋`;
   const jsonMetadata = { tags: [monitoringTag] };
   steem.broadcast.comment(
     postKey,
@@ -55,7 +55,7 @@ function voting(post) {
     creator,
     post.author,
     post.permlink,
-    10000,
+    100,
     (err, res) => {
       if (err) {
         console.log("error", err);
