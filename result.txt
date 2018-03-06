@@ -1,0 +1,158 @@
+{ status: 'ok',
+  statusCode: 200,
+  headers: 
+   { 'content-type': 'text/html',
+     'content-length': '2',
+     connection: 'close',
+     'access-control-allow-origin': '*',
+     date: 'Tue, 06 Mar 2018 09:44:56 GMT',
+     'referrer-policy': 'no-referrer',
+     server: 'Apache',
+     'strict-transport-security': 'max-age=31536000; includeSubDomains; preload',
+     vary: 'Accept-Encoding',
+     'x-frame-options': 'SAMEORIGIN',
+     'x-slack-backend': 'h',
+     'x-cache': 'Miss from cloudfront',
+     via: '1.1 4651c153c4df175c0828cd7d380e32cc.cloudfront.net (CloudFront)',
+     'x-amz-cf-id': 'jy7jMgqfB4wdU2-_Q-SPqf94LH9huHn1M0tXsUpxnz9DchYw5ijzOw==' },
+  response: 'ok' }
+{ status: 'ok',
+  statusCode: 200,
+  headers: 
+   { 'content-type': 'text/html',
+     'content-length': '2',
+     connection: 'close',
+     'access-control-allow-origin': '*',
+     date: 'Tue, 06 Mar 2018 09:44:56 GMT',
+     'referrer-policy': 'no-referrer',
+     server: 'Apache',
+     'strict-transport-security': 'max-age=31536000; includeSubDomains; preload',
+     vary: 'Accept-Encoding',
+     'x-frame-options': 'SAMEORIGIN',
+     'x-slack-backend': 'h',
+     'x-cache': 'Miss from cloudfront',
+     via: '1.1 83c6b175725bb99d681119f66901f43f.cloudfront.net (CloudFront)',
+     'x-amz-cf-id': 'EhJHGDxUh4AHvPiedjWjXQxrRfjoQltBew8qh15BSI_gePQhQaGNtg==' },
+  response: 'ok' }
+error { RPCError: 10 assert_exception: Assert Exception
+abs_rshares > STEEMIT_VOTE_DUST_THRESHOLD || o.weight == 0: Voting weight is too small, please accumulate more voting power or steem power.
+    {}
+    th_a  steem_evaluator.cpp:1195 do_apply
+
+    {"o":{"voter":"meshkorea","author":"meshkorea","permlink":"steem-js-test","weight":100}}
+    th_a  steem_evaluator.cpp:1504 do_apply
+
+    {"op":["vote",{"voter":"meshkorea","author":"meshkorea","permlink":"steem-js-test","weight":100}]}
+    th_a  database.cpp:2893 _apply_transaction
+
+    {"trx":{"ref_block_num":52943,"ref_block_prefix":1664417743,"expiration":"2018-03-06T09:54:54","operations":[["vote",{"voter":"meshkorea","author":"meshkorea","permlink":"steem-js-test","weight":100}]],"extensions":[],"signatures":["2056c693ec7961ef7fb9a3b9ccfe049b9e3654bb569bfa68625935ed7fba683f0d5c399e7f7a4d916c93ff7fb0a50f2f08250c4db01a79854a103d63abc7b631da"]}}
+    th_a  database.cpp:2897 _apply_transaction
+
+    {"trx":{"ref_block_num":52943,"ref_block_prefix":1664417743,"expiration":"2018-03-06T09:54:54","operations":[["vote",{"voter":"meshkorea","author":"meshkorea","permlink":"steem-js-test","weight":100}]],"extensions":[],"signatures":["2056c693ec7961ef7fb9a3b9ccfe049b9e3654bb569bfa68625935ed7fba683f0d5c399e7f7a4d916c93ff7fb0a50f2f08250c4db01a79854a103d63abc7b631da"]}}
+    th_a  database.cpp:660 push_transaction
+
+    {"call.method":"call","call.params":["network_broadcast_api","broadcast_transaction_synchronous",[{"ref_block_num":52943,"ref_block_prefix":1664417743,"expiration":"2018-03-06T09:54:54","operations":[["vote",{"voter":"meshkorea","author":"meshkorea","permlink":"steem-js-test","weight":100}]],"extensions":[],"signatures":["2056c693ec7961ef7fb9a3b9ccfe049b9e3654bb569bfa68625935ed7fba683f0d5c399e7f7a4d916c93ff7fb0a50f2f08250c4db01a79854a103d63abc7b631da"]}]]}
+    th_a  websocket_api.cpp:124 on_message
+    at RPCError.Error (native)
+    at new RPCError (/Users/clare/mesh/_my/repositories/steem/node_modules/steem/lib/api/transports/http.js:39:106)
+    at /Users/clare/mesh/_my/repositories/steem/node_modules/steem/lib/api/transports/http.js:74:13
+    at process._tickCallback (internal/process/next_tick.js:103:7)
+  cause: 
+   { RPCError: 10 assert_exception: Assert Exception
+   abs_rshares > STEEMIT_VOTE_DUST_THRESHOLD || o.weight == 0: Voting weight is too small, please accumulate more voting power or steem power.
+       {}
+       th_a  steem_evaluator.cpp:1195 do_apply
+   
+       {"o":{"voter":"meshkorea","author":"meshkorea","permlink":"steem-js-test","weight":100}}
+       th_a  steem_evaluator.cpp:1504 do_apply
+   
+       {"op":["vote",{"voter":"meshkorea","author":"meshkorea","permlink":"steem-js-test","weight":100}]}
+       th_a  database.cpp:2893 _apply_transaction
+   
+       {"trx":{"ref_block_num":52943,"ref_block_prefix":1664417743,"expiration":"2018-03-06T09:54:54","operations":[["vote",{"voter":"meshkorea","author":"meshkorea","permlink":"steem-js-test","weight":100}]],"extensions":[],"signatures":["2056c693ec7961ef7fb9a3b9ccfe049b9e3654bb569bfa68625935ed7fba683f0d5c399e7f7a4d916c93ff7fb0a50f2f08250c4db01a79854a103d63abc7b631da"]}}
+       th_a  database.cpp:2897 _apply_transaction
+   
+       {"trx":{"ref_block_num":52943,"ref_block_prefix":1664417743,"expiration":"2018-03-06T09:54:54","operations":[["vote",{"voter":"meshkorea","author":"meshkorea","permlink":"steem-js-test","weight":100}]],"extensions":[],"signatures":["2056c693ec7961ef7fb9a3b9ccfe049b9e3654bb569bfa68625935ed7fba683f0d5c399e7f7a4d916c93ff7fb0a50f2f08250c4db01a79854a103d63abc7b631da"]}}
+       th_a  database.cpp:660 push_transaction
+   
+       {"call.method":"call","call.params":["network_broadcast_api","broadcast_transaction_synchronous",[{"ref_block_num":52943,"ref_block_prefix":1664417743,"expiration":"2018-03-06T09:54:54","operations":[["vote",{"voter":"meshkorea","author":"meshkorea","permlink":"steem-js-test","weight":100}]],"extensions":[],"signatures":["2056c693ec7961ef7fb9a3b9ccfe049b9e3654bb569bfa68625935ed7fba683f0d5c399e7f7a4d916c93ff7fb0a50f2f08250c4db01a79854a103d63abc7b631da"]}]]}
+       th_a  websocket_api.cpp:124 on_message
+       at RPCError.Error (native)
+       at new RPCError (/Users/clare/mesh/_my/repositories/steem/node_modules/steem/lib/api/transports/http.js:39:106)
+       at /Users/clare/mesh/_my/repositories/steem/node_modules/steem/lib/api/transports/http.js:74:13
+       at process._tickCallback (internal/process/next_tick.js:103:7)
+     name: 'RPCError',
+     code: 1,
+     data: 
+      { code: 10,
+        name: 'assert_exception',
+        message: 'Assert Exception',
+        stack: [Object] } },
+  isOperational: true,
+  code: 1,
+  data: 
+   { code: 10,
+     name: 'assert_exception',
+     message: 'Assert Exception',
+     stack: [ [Object], [Object], [Object], [Object], [Object], [Object] ] } }
+error { RPCError: 10 assert_exception: Assert Exception
+abs_rshares > STEEMIT_VOTE_DUST_THRESHOLD || o.weight == 0: Voting weight is too small, please accumulate more voting power or steem power.
+    {}
+    th_a  steem_evaluator.cpp:1195 do_apply
+
+    {"o":{"voter":"meshkorea","author":"meshkorea","permlink":"7lpqtf","weight":100}}
+    th_a  steem_evaluator.cpp:1504 do_apply
+
+    {"op":["vote",{"voter":"meshkorea","author":"meshkorea","permlink":"7lpqtf","weight":100}]}
+    th_a  database.cpp:2893 _apply_transaction
+
+    {"trx":{"ref_block_num":52943,"ref_block_prefix":1664417743,"expiration":"2018-03-06T09:54:54","operations":[["vote",{"voter":"meshkorea","author":"meshkorea","permlink":"7lpqtf","weight":100}]],"extensions":[],"signatures":["1f5d6608cf3979d3b0bf1b2b99f0a55039ee0381e5e728039b9b3d6ce025904537137b49ccc2abd6641a1826e8a262ae4a67ec31a73e2a84861890426d974e3a45"]}}
+    th_a  database.cpp:2897 _apply_transaction
+
+    {"trx":{"ref_block_num":52943,"ref_block_prefix":1664417743,"expiration":"2018-03-06T09:54:54","operations":[["vote",{"voter":"meshkorea","author":"meshkorea","permlink":"7lpqtf","weight":100}]],"extensions":[],"signatures":["1f5d6608cf3979d3b0bf1b2b99f0a55039ee0381e5e728039b9b3d6ce025904537137b49ccc2abd6641a1826e8a262ae4a67ec31a73e2a84861890426d974e3a45"]}}
+    th_a  database.cpp:660 push_transaction
+
+    {"call.method":"call","call.params":["network_broadcast_api","broadcast_transaction_synchronous",[{"ref_block_num":52943,"ref_block_prefix":1664417743,"expiration":"2018-03-06T09:54:54","operations":[["vote",{"voter":"meshkorea","author":"meshkorea","permlink":"7lpqtf","weight":100}]],"extensions":[],"signatures":["1f5d6608cf3979d3b0bf1b2b99f0a55039ee0381e5e728039b9b3d6ce025904537137b49ccc2abd6641a1826e8a262ae4a67ec31a73e2a84861890426d974e3a45"]}]]}
+    th_a  websocket_api.cpp:124 on_message
+    at RPCError.Error (native)
+    at new RPCError (/Users/clare/mesh/_my/repositories/steem/node_modules/steem/lib/api/transports/http.js:39:106)
+    at /Users/clare/mesh/_my/repositories/steem/node_modules/steem/lib/api/transports/http.js:74:13
+    at process._tickCallback (internal/process/next_tick.js:103:7)
+  cause: 
+   { RPCError: 10 assert_exception: Assert Exception
+   abs_rshares > STEEMIT_VOTE_DUST_THRESHOLD || o.weight == 0: Voting weight is too small, please accumulate more voting power or steem power.
+       {}
+       th_a  steem_evaluator.cpp:1195 do_apply
+   
+       {"o":{"voter":"meshkorea","author":"meshkorea","permlink":"7lpqtf","weight":100}}
+       th_a  steem_evaluator.cpp:1504 do_apply
+   
+       {"op":["vote",{"voter":"meshkorea","author":"meshkorea","permlink":"7lpqtf","weight":100}]}
+       th_a  database.cpp:2893 _apply_transaction
+   
+       {"trx":{"ref_block_num":52943,"ref_block_prefix":1664417743,"expiration":"2018-03-06T09:54:54","operations":[["vote",{"voter":"meshkorea","author":"meshkorea","permlink":"7lpqtf","weight":100}]],"extensions":[],"signatures":["1f5d6608cf3979d3b0bf1b2b99f0a55039ee0381e5e728039b9b3d6ce025904537137b49ccc2abd6641a1826e8a262ae4a67ec31a73e2a84861890426d974e3a45"]}}
+       th_a  database.cpp:2897 _apply_transaction
+   
+       {"trx":{"ref_block_num":52943,"ref_block_prefix":1664417743,"expiration":"2018-03-06T09:54:54","operations":[["vote",{"voter":"meshkorea","author":"meshkorea","permlink":"7lpqtf","weight":100}]],"extensions":[],"signatures":["1f5d6608cf3979d3b0bf1b2b99f0a55039ee0381e5e728039b9b3d6ce025904537137b49ccc2abd6641a1826e8a262ae4a67ec31a73e2a84861890426d974e3a45"]}}
+       th_a  database.cpp:660 push_transaction
+   
+       {"call.method":"call","call.params":["network_broadcast_api","broadcast_transaction_synchronous",[{"ref_block_num":52943,"ref_block_prefix":1664417743,"expiration":"2018-03-06T09:54:54","operations":[["vote",{"voter":"meshkorea","author":"meshkorea","permlink":"7lpqtf","weight":100}]],"extensions":[],"signatures":["1f5d6608cf3979d3b0bf1b2b99f0a55039ee0381e5e728039b9b3d6ce025904537137b49ccc2abd6641a1826e8a262ae4a67ec31a73e2a84861890426d974e3a45"]}]]}
+       th_a  websocket_api.cpp:124 on_message
+       at RPCError.Error (native)
+       at new RPCError (/Users/clare/mesh/_my/repositories/steem/node_modules/steem/lib/api/transports/http.js:39:106)
+       at /Users/clare/mesh/_my/repositories/steem/node_modules/steem/lib/api/transports/http.js:74:13
+       at process._tickCallback (internal/process/next_tick.js:103:7)
+     name: 'RPCError',
+     code: 1,
+     data: 
+      { code: 10,
+        name: 'assert_exception',
+        message: 'Assert Exception',
+        stack: [Object] } },
+  isOperational: true,
+  code: 1,
+  data: 
+   { code: 10,
+     name: 'assert_exception',
+     message: 'Assert Exception',
+     stack: [ [Object], [Object], [Object], [Object], [Object], [Object] ] } }

@@ -14,7 +14,7 @@ const web = new WebClient(token);
 
 const postKey = process.env.POST_KEY;
 
-const query = { tag: monitoringTag, limit: 1 };
+const query = { tag: monitoringTag, limit: 10 };
 steem.api.getDiscussionsByCreated(query, function(err, res) {
   if (err) {
     console.log(err);
