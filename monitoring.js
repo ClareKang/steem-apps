@@ -1,17 +1,12 @@
 const dotenv = require("dotenv");
 const steem = require("steem");
 var Slack = require("slack-node");
-const { WebClient } = require("@slack/client");
 
 dotenv.config();
 slack = new Slack();
 
 const monitoringTag = process.env.MONITORING_TAG;
 const creator = process.env.CREATOR;
-const token = process.env.SLACK_TOKEN;
-const channelId = process.env.SLACK_CHANNEL;
-const web = new WebClient(token);
-
 const postKey = process.env.POST_KEY;
 
 const query = { tag: monitoringTag, limit: 10 };
